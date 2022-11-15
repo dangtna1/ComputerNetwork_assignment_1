@@ -15,11 +15,11 @@ A chat application for a simple P2P network.
         register                          
         listpeer                            
         exit network                        
-        chat request [host] [port]          
+        request [peername]        
         chat message [peername] [message]   
         list connected peer                
         help                               
-        disconnect                          
+        disconnect [connected peer]                      
         exit                                
     
     >> register
