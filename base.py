@@ -23,7 +23,7 @@ class Peer(object):
         pass
     
     def recv(self):
-        while True:  # 超过缓冲区大小的，就会丢失信息
+        while True:  
             conn, addr = self.socket.accept()
             buf = conn.recv(2048)
             msg = json.loads(buf.decode('utf-8'))
@@ -43,7 +43,7 @@ class Peer(object):
         try:
             s.connect(address)
         except ConnectionRefusedError:
-            print('连接出错: 请确认对方已开启')
+            print('Lỗi kết nối')
             raise
         else:
             s.send(msg)

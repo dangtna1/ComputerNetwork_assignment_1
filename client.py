@@ -83,13 +83,12 @@ class Client(Peer):
         curnum = int(msgdata['curnum'])
         filedata = msgdata['filedata']
         
-        key = peername + '_' + filename
+        key = peername + "'S" + filename
         if self.file_data.get(key) is None:
             self.file_data[key] = [None] * filenum
         self.file_data[key][curnum] = filedata
-        print(self.file_data[key])
-        print(self.file_data.get(key) is None)
-
+        print(self.file_data[key]) #print the content of the file
+       
         flag = True
         for i in self.file_data[key]:
             if i is None:
@@ -322,7 +321,7 @@ class Client(Peer):
     
     def refuse_request(self):
         self.agree = False
-    
+
     def system_exit(self):  
         for peername in self.peerlist: 
             try:
@@ -345,6 +344,7 @@ class Client(Peer):
         print(self.input_prompt_format.format(cmd='exit network', prompt='thoát kết nối mạng'))
         print(self.input_prompt_format.format(cmd='request [peername]', prompt='yêu cầu kết bạn'))
         print(self.input_prompt_format.format(cmd='chat message [peername] [message]', prompt='nhắn tin cho [bạn bè cụ thể] [tin nhắn]'))
+        print(self.input_prompt_format.format(cmd='sendfile [connected peer name] [filename]', prompt='gửi file cho [bạn bè cụ thể] [tên file]'))
         print(self.input_prompt_format.format(cmd='list connected peer', prompt='liệt kê những người đang kết nối mạng'))
         print(self.input_prompt_format.format(cmd='help', prompt='hỗ trợ'))
         print(self.input_prompt_format.format(cmd='disconnect [connected peer name]', prompt='hủy kết nối với [bạn bè cụ thể]'))
