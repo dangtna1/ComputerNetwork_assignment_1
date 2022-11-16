@@ -2,9 +2,6 @@
 
 A chat application for a simple P2P network.
 
-- Programming language: Python 3.7.0
-
-- Use only built-in libraries.
 
 ## Example
 
@@ -47,10 +44,10 @@ Server:
 
 ![](example/server.png)
 
-Client_a:
+ClientA:
 
 ![](example/clientA.png)
 
-Client_b:
+ClientB:
 
 ![](example/clientB.png)
