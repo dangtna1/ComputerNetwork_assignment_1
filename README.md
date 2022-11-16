@@ -49,8 +49,8 @@ Server:
 
 Client_a:
 
-![](example/client_a.png)
+![](example/clientA.png)
 
 Client_b:
 
-![](example/client_b.png)
+![](example/clientB.png)
